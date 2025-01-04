@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Timer</h1>
+            <input type="number" name="" id="m" value="00">
+            <label for="">:</label>
+            <input type="number" name="" id="s" value="00"><br>
+            <button onclick="start()">&#9654;</button><br>
+            <input type="reset" name="" id="" value="Reset"><br><br>
+            
+            <button onclick="add1(event)">+</button>
+            <input type="number" name="e1" id="e1" max = 99 value="0" style="width: 20vh;">
+            <label for="">-</label>
+            <input type="number" name="e2" id="e2" max = 99 value="0" style="width: 20vh;">
+            <button onclick="add2(event)">+</button>
+            <br>
+
+            <div class="teams">
+                <label for="e1">TEAM 1</label>
+                <label for="e2">TEAM 2</label>
+            </div><br><br>
+            
+        </form>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
