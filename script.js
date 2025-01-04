@@ -22,18 +22,26 @@ function add2(event) {
 function start() {
     second = parseInt(document.getElementById("s").value)
     minute = parseInt(document.getElementById("m").value)
-    if (minute === 0 && second === 0) {
+    if (minute <= 0 && second <= 0) {
         alert("Time is up!")
         clearInterval(interval)
+        document.getElementById("m").value = 0;
+        document.getElementById("s").value = 0;
     }
     else {
         interval = setInterval(function () {
-            if (second === 0) {
+            if (second === 0 && minute - 1 <= 0) {
                 second = 59;
                 minute--;
             }
-            else {
+            else if (minute >= 0 && second >= 1 && second < 60) {
                 second--;
+            }
+            else {
+                alert("Time is up!");
+                clearInterval(interval)
+                document.getElementById("m").value = 0;
+                document.getElementById("s").value = 0;
             }
             document.getElementById("m").value = minute;
             document.getElementById("s").value = second < 10 ? "0" + second : second;
